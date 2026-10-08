@@ -18,13 +18,19 @@ All numbers use the same 164 rTMS patients (78 remitters) unless stated. "Mean A
 | nPPV / sensitivity | 139 to 155 / 0.50 to 0.59 |
 | Why it matters | This is the bar any EEG predictor has to beat in this cohort. Adding the EEG features did not improve on it (0.686). Baseline BDI does most of the work (0.67 alone). EEG could not estimate BDI (correlation 0.17). |
 
-## 3. The one clean EEG-only result: predicting age from EEG - `age_from_EEG/`
+## 3. Best EEG-only result overall: predicting age from EEG - `age_from_EEG/`
 | | Result |
 |---|---|
-| Model | same 65 features, ridge regression, 958 adults |
-| R-squared | **0.39** overall; 0.36 in MDD patients, 0.42 in healthy people, 0.37 in other clinic patients |
-| Average error | about 9.8 years |
-| Verdict | **Real and consistent across cohorts.** (Sex from EEG is weaker: balanced accuracy 0.71 overall, 0.63 within healthy people.) Age is not one of the two prize criteria as far as we could tell from the rules page. |
+| Model | ridge regression on full resting spectra (log power in 1-Hz bins, 1 to 30 Hz, 26 channels, eyes closed and open) plus the 65-feature panel |
+| R-squared (adults, n = 957) | **0.53**; 0.47 in MDD patients, 0.53 in healthy people, 0.52 in other clinic patients |
+| Average error | **8.4 years** |
+| All ages including children (n = 1,119) | R-squared 0.65 |
+| Gain over the 65-feature panel | +0.135 (95% interval 0.10 to 0.17); the panel alone gave 0.39 |
+| Verdict | **Real and consistent across cohorts.** Comparable to the leaderboard's age entry (R-squared 0.52), though that was scored on held-out data. Age and sex prediction are leaderboard-only categories, not part of the EUR 10,000 prize. |
+
+Sex from the same spectra: AUC 0.82, balanced accuracy 0.73 overall but only 0.64 within healthy people, so not reliable across cohorts (leaderboard entry: 0.85).
+
+Files: `spectra_age_analysis.json` (full spectra), `spectra_sex_analysis.json`, `panel65_age_sex_analysis.json` (earlier 65-feature models).
 
 ## 4. Kept for the record, but INVALID - `invalid_diagnostic_batch_confounded/`
 EEG-only MDD vs healthy reached balanced accuracy **0.755** (AUC 0.84). This looked like the strongest result in the project and is **not** a real finding. The follow-up control tests showed it separates the research cohort from the clinic cohort rather than MDD from healthy:

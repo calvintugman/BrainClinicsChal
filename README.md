@@ -2,7 +2,7 @@
 
 Attempts at the Brainclinics Prize using the open TDBRAIN EEG dataset: predicting rTMS outcome in depression from resting EEG (prognostic) and telling MDD from healthy controls (diagnostic).
 
-**Short version:** no EEG-only predictor reached the prize bar. The best prognostic result is a remission AUC of 0.577 (not distinguishable from chance), baseline clinical variables reach 0.70 but are not EEG-only, and an apparently strong MDD-vs-healthy result (balanced accuracy 0.755) was shown to be a cohort effect and is not valid. Age can be predicted from EEG (R-squared about 0.39).
+**Short version:** no EEG-only predictor reached the prize bar. The best prognostic result is a remission AUC of 0.577 (not distinguishable from chance), baseline clinical variables reach 0.70 but are not EEG-only, and an apparently strong MDD-vs-healthy result (balanced accuracy 0.755) was shown to be a cohort effect and is not valid. The best EEG-only result is age prediction: R-squared 0.53 in adults (average error 8.4 years), consistent across cohorts; this is a leaderboard-only category, not part of the prize.
 
 ## Start here
 - [`docs/PROJECT_LOG.md`](docs/PROJECT_LOG.md) - plain-language account of what was done, what worked, what did not
@@ -13,7 +13,7 @@ Attempts at the Brainclinics Prize using the open TDBRAIN EEG dataset: predictin
 ```
 docs/        project log, decisions, experiment ledger, audit, pipeline notes
 docs/protocols/   one written protocol per stage, each frozen before scoring
-scripts/     numbered analysis code (01 to 46) and shared helpers
+scripts/     numbered analysis code (01 to 49) and shared helpers
 reports/     self-contained HTML reports from earlier stages
 results/     best/ (headline results), runs/ (aggregate metrics per run), summaries/ (small JSON)
 requirements.txt

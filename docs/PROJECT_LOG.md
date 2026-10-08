@@ -35,16 +35,17 @@ Every stage had a written protocol that was frozen **before** any result was sco
 | 10 | Confound control | Is the diagnostic result real? | Within an overlapping ID range BA fell to 0.58; the model separates early from late healthy subjects (BA 0.83); it cannot separate MDD from other clinic patients (0.53) but does separate healthy from them (0.76) | **Batch/cohort effect, not MDD. Diagnostic arm closed.** |
 | 11 | Era check | Do patient outcomes or our EEG score follow recording order? | Later subject IDs (and later protocols) remit less; our EEG score does not track ID | Context only |
 | 12 | Age and sex | Can EEG predict age and sex? | Age R2 0.39, holds in every cohort; sex BA 0.71 (0.63 in healthy only) | Age is real |
+| 13 | Full spectra | Do detailed per-channel spectra (1 to 30 Hz) predict age, sex or remission better? | Age R2 0.53 in adults (error 8.4 years), 0.65 including children; sex AUC 0.82 / BA 0.73; remission AUC 0.485; brain-age gap vs remission 0.46 | **Best result: age.** Remission still null |
 
 ## 5. Main lessons
 1. **No EEG-only prediction of rTMS outcome was found.** Best AUC 0.577 (not distinguishable from chance), against roughly 0.70 needed for the prize bar. With 78 remitters and 86 non-remitters, only large effects are detectable.
 2. **Baseline depression severity does most of the predictive work** in this cohort, and EEG cannot recover it. Any future EEG feature should be judged against this clinical baseline.
 3. **Check for cohort effects before trusting a big number.** The first diagnostic result was 12 points above the leaderboard and turned out to reflect which cohort a recording came from. The subject ID number alone separated the groups (AUC 0.92).
 4. **Cleaning choices matter.** The same features moved from 0.517 to 0.577 when artefact removal was corrected.
-5. **Age can be predicted from EEG** (R2 about 0.39) and this holds within each cohort.
+5. **Age can be predicted from EEG.** Full spectra reach R2 0.53 in adults (average error 8.4 years), consistent across cohorts and on par with the leaderboard's age entry. Age is a leaderboard-only category, not part of the prize. The same detailed spectra do not predict rTMS outcome.
 
 ## 6. Dead ends (do not repeat without a new idea)
-Standard band-power/asymmetry/connectivity panels; gradient boosting on them; spectral parametrisation; covariance and EC/EO eigenvalue features; the DynaMix embedding; the EC-to-EO deviation features; clinical-assist models using EEG-estimated age/sex/BDI; MDD-vs-healthy classification on this data (batch-confounded).
+Standard band-power/asymmetry/connectivity panels; full per-channel spectra for remission; gradient boosting on them; spectral parametrisation; covariance and EC/EO eigenvalue features; the DynaMix embedding; the EC-to-EO deviation features; clinical-assist models using EEG-estimated age/sex/BDI; MDD-vs-healthy classification on this data (batch-confounded).
 
 ## 7. Caveats
 - The same patients were reused in every stage; there is no untouched validation set.
@@ -57,12 +58,12 @@ Standard band-power/asymmetry/connectivity panels; gradient boosting on them; sp
 - Independent data (no second labelled cohort was available locally).
 - The temporal-feature benchmark from the literature (needs MATLAB tools we did not have).
 - Requesting the oddball task recordings from the dataset authors.
-- A richer age model (full spectra), which would need re-extracting features.
+- Submitting age predictions for the held-out recordings (the organisers can unblind age for the leaderboard; not done, needs a decision).
 - A diagnostic design that is not batch-confounded (needs healthy and MDD recordings from the same source and period).
 
 ## 9. Repository map
 - `docs/` this log, `DECISIONS.md`, `EXPERIMENTS.csv`, `AUDIT.md`, `PIPELINE.md` (how to rerun), `protocols/`
-- `scripts/` numbered analysis code (01 to 46) and shared helpers
+- `scripts/` numbered analysis code (01 to 49) and shared helpers
 - `reports/` self-contained HTML reports from earlier stages
 - `results/best/` the headline results (see `BEST_RESULTS.md`)
 - `results/runs/` aggregate metrics for every run (no subject-level files)
