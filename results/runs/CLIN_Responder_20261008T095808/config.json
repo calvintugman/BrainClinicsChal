@@ -1,0 +1,33 @@
+{
+ "run_id": "CLIN_Responder_20261008T095808",
+ "endpoint": "Responder",
+ "n": 164,
+ "n_pos": 97,
+ "protocol": "CLINICAL_PROTOCOL.md",
+ "variables": [
+  "age",
+  "sex",
+  "BDI_pre",
+  "prot1",
+  "prot2",
+  "prot3"
+ ],
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "grid_C": [
+  0.01,
+  0.1,
+  1,
+  10
+ ],
+ "parent": "PIV_E01c_Responder",
+ "code_fp": "7314845a4d2909a5",
+ "feature_fp": "f159581cd4a86d09",
+ "runtime_s": 45,
+ "python": "3.14.7",
+ "started_local": "2026-10-08T09:58:49+0800",
+ "utc": "2026-10-08T01:58:49Z"
+}

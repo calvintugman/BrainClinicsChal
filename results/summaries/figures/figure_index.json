@@ -1,0 +1,86 @@
+[
+ {
+  "figure": "fig1_cohort",
+  "png": "outputs/figures/fig1_cohort.png",
+  "pdf": "outputs/figures/fig1_cohort.pdf",
+  "runs": [
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ],
+  "split_fp": {
+   "Remitter": "5766b0195dd300f0",
+   "Responder": "ab707d468ae0a1b2"
+  },
+  "feature_fp": "99ff49764ddd6112"
+ },
+ {
+  "figure": "fig2_model_comparison",
+  "png": "outputs/figures/fig2_model_comparison.png",
+  "pdf": "outputs/figures/fig2_model_comparison.pdf",
+  "runs": [
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ],
+  "split_fp": {
+   "Remitter": "5766b0195dd300f0",
+   "Responder": "ab707d468ae0a1b2"
+  },
+  "feature_fp": "99ff49764ddd6112"
+ },
+ {
+  "figure": "fig3_added_value",
+  "png": "outputs/figures/fig3_added_value.png",
+  "pdf": "outputs/figures/fig3_added_value.pdf",
+  "runs": [
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ],
+  "split_fp": {
+   "Remitter": "5766b0195dd300f0",
+   "Responder": "ab707d468ae0a1b2"
+  },
+  "feature_fp": "99ff49764ddd6112"
+ },
+ {
+  "figure": "fig4_predictions",
+  "png": "outputs/figures/fig4_predictions.png",
+  "pdf": "outputs/figures/fig4_predictions.pdf",
+  "runs": [
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ],
+  "split_fp": {
+   "Remitter": "5766b0195dd300f0",
+   "Responder": "ab707d468ae0a1b2"
+  },
+  "feature_fp": "99ff49764ddd6112"
+ },
+ {
+  "figure": "fig5_reliability",
+  "png": "outputs/figures/fig5_reliability.png",
+  "pdf": "outputs/figures/fig5_reliability.pdf",
+  "runs": [
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ],
+  "split_fp": {
+   "Remitter": "5766b0195dd300f0",
+   "Responder": "ab707d468ae0a1b2"
+  },
+  "feature_fp": "99ff49764ddd6112"
+ },
+ {
+  "figure": "fig6_cleaning_example",
+  "png": "outputs/figures/fig6_cleaning_example.png",
+  "pdf": "outputs/figures/fig6_cleaning_example.pdf",
+  "runs": [
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ],
+  "split_fp": {
+   "Remitter": "5766b0195dd300f0",
+   "Responder": "ab707d468ae0a1b2"
+  },
+  "feature_fp": "99ff49764ddd6112"
+ }
+]

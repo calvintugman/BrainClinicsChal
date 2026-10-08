@@ -1,0 +1,9 @@
+{
+ "qc_recordings_with_v2_ok": 23,
+ "removed_components": 46,
+ "pipeline_reproduction_exact_all": true,
+ "unresolved_components": 2,
+ "blink_evidence_ratio_ge3": 42,
+ "abs_r_HEOG_ge_0_3": 18,
+ "rule": "unresolved = blink-locked peak/baseline SD < 3 AND |r_HEOG| < 0.3 (documentation only; cleaning not altered)"
+}

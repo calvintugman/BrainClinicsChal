@@ -1,0 +1,79 @@
+[
+ {
+  "figure": "figB1_all_vs_E01",
+  "png": "outputs/figures_batch2/figB1_all_vs_E01.png",
+  "pdf": "outputs/figures_batch2/figB1_all_vs_E01.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ },
+ {
+  "figure": "figB2_paired_changes",
+  "png": "outputs/figures_batch2/figB2_paired_changes.png",
+  "pdf": "outputs/figures_batch2/figB2_paired_changes.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ },
+ {
+  "figure": "figB3_operating_behavior",
+  "png": "outputs/figures_batch2/figB3_operating_behavior.png",
+  "pdf": "outputs/figures_batch2/figB3_operating_behavior.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ },
+ {
+  "figure": "figB6_reliability_robustness",
+  "png": "outputs/figures_batch2/figB6_reliability_robustness.png",
+  "pdf": "outputs/figures_batch2/figB6_reliability_robustness.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ },
+ {
+  "figure": "figB4_specparam_fits",
+  "png": "outputs/figures_batch2/figB4_specparam_fits.png",
+  "pdf": "outputs/figures_batch2/figB4_specparam_fits.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ },
+ {
+  "figure": "figB5_covariance_illustration",
+  "png": "outputs/figures_batch2/figB5_covariance_illustration.png",
+  "pdf": "outputs/figures_batch2/figB5_covariance_illustration.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ },
+ {
+  "figure": "figB7_complexity",
+  "png": "outputs/figures_batch2/figB7_complexity.png",
+  "pdf": "outputs/figures_batch2/figB7_complexity.pdf",
+  "runs": [
+   "B2_Remitter_20261005T064138",
+   "B2_Responder_20261005T064202",
+   "R_rest_Remitter_20261005T060529",
+   "R_rest_Responder_20261005T060644"
+  ]
+ }
+]

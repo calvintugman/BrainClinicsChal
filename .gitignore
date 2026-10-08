@@ -1,0 +1,19 @@
+# data and subject-level files
+TDBRAIN_*/
+*.bdf
+*.edf
+*.xlsx
+*_PRIVATE*
+/outputs/
+/runs/
+# environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# os / editor files
+.DS_Store
+.idea/
+.vscode/
+*.log

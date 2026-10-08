@@ -1,0 +1,70 @@
+{
+ "workbook_people_with_inconsistent_indication_or_dataset_across_rows": 0,
+ "discovery_groups": [
+  {
+   "group": "healthy_verified_by_workbook_indication",
+   "people": 179,
+   "recordings": 582
+  },
+  {
+   "group": "other_discovery_unlabeled_for_remission",
+   "people": 848,
+   "recordings": 1782
+  },
+  {
+   "group": "other_treatment_cohort(ADHD_NF)",
+   "people": 66,
+   "recordings": 142
+  },
+  {
+   "group": "other_treatment_cohort(ADHD_NF/OCD)",
+   "people": 1,
+   "recordings": 2
+  },
+  {
+   "group": "other_treatment_cohort(OCD)",
+   "people": 39,
+   "recordings": 82
+  },
+  {
+   "group": "rTMS_excluded_timing",
+   "people": 3,
+   "recordings": 6
+  },
+  {
+   "group": "rTMS_labeled_164",
+   "people": 164,
+   "recordings": 344
+  }
+ ],
+ "n_discovery_people": 1300,
+ "id_overlap": {
+  "discovery&rep_Dx": 0,
+  "discovery&rep_Tx": 0,
+  "rep_Dx&rep_Tx": 0
+ },
+ "replication_ids_in_workbook": {
+  "rep_Dx": 0,
+  "rep_Tx": 0
+ },
+ "hash_check": {
+  "files_fingerprinted": 3268,
+  "fingerprint_collision_groups": 2,
+  "files_fully_hashed": 4,
+  "identical_content_across_sets": 0,
+  "identical_content_within_a_set": 2,
+  "method": "size + sha256(first 1 MiB + last 64 KiB) for every file; full sha256 only for fingerprint-colliding files. Not a full-content checksum of all files."
+ },
+ "labeled_164": {
+  "n": 164,
+  "timing_basis": "session-1 by dataset convention; unverified",
+  "sessions_available": 8,
+  "with_ses2_too": true
+ },
+ "oddball": {
+  "healthy_verified_by_workbook_indication": 129
+ },
+ "healthy_note": "healthy = workbook indication==HEALTHY only; other discovery people are NOT assumed healthy or remission-labeled",
+ "reference_pool_for_EC_EO_extension_candidates": 1129,
+ "manifest_sha256": "3b4901370b4d44cad9e5f62e2d7ccbc57727180ea0ef4bfacd75a34cc56c0a34"
+}

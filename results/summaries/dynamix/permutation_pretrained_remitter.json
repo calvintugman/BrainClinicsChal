@@ -1,0 +1,13 @@
+{
+ "observed_mean_AUC": 0.4899622341482807,
+ "n_perm": 999,
+ "rng_seed": 11,
+ "p_value_plus_one": 0.56,
+ "null_mean": 0.49834066823730905,
+ "null_sd": 0.05577982042924653,
+ "null_q95": 0.5925859670045717,
+ "null_q99": 0.6267342476644802,
+ "runtime_s": 198,
+ "refit": "full pipeline (impute/scale, inner-CV C selection, threshold) per repeat; folds regenerated from permuted labels with seeds 42/43/44; statistic = mean of 3 pooled-OOF AUCs",
+ "interpretation": "association of the pretrained-DynaMix pipeline with remission beyond label-shuffled chance; not superiority over E01c; not evidence that pretraining helps"
+}

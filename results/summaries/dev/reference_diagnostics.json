@@ -1,0 +1,182 @@
+{
+ "n_reference_total": 762,
+ "n_train": 610,
+ "n_eval": 152,
+ "uncentered_identity_check": {
+  "alpha": 1,
+  "alpha_previous": 1,
+  "mean_R2": 0.8048450333360697,
+  "mean_R2_previous": 0.8048450333360698
+ },
+ "shape_mapping": {
+  "alpha": 10,
+  "vs_a_mean_shape": {
+   "mean_MSE_base": 0.2140081362057591,
+   "mean_MSE_model": 0.07350868408809326,
+   "mean_reduction": 0.14049945211766585,
+   "reduction_ci": [
+    0.11563334455039351,
+    0.167414609593781
+   ],
+   "relative_reduction": 0.6565145354220646,
+   "relative_ci": [
+    0.5953311002798652,
+    0.7070594571320598
+   ]
+  },
+  "vs_b_persistence": {
+   "mean_MSE_base": 0.12728571531893235,
+   "mean_MSE_model": 0.07350868408809326,
+   "mean_reduction": 0.05377703123083908,
+   "reduction_ci": [
+    0.03984265582932844,
+    0.0703234961871562
+   ],
+   "relative_reduction": 0.42249070208776474,
+   "relative_ci": [
+    0.35458807402501274,
+    0.4865164881556555
+   ]
+  },
+  "stronger_baseline": "b_persistence_plus_mean_shift",
+  "relative_reduction_vs_stronger": 0.42249070208776485,
+  "aggregate_MSE": {
+   "ridge_shape": 0.07350868408809326,
+   "a_mean_EO_shape": 0.2140081362057591,
+   "b_persistence_plus_mean_shift": 0.12728571531893235
+  },
+  "per_element_MSE": {
+   "frontal_delta": {
+    "ridge_shape": 0.09764513693571009,
+    "a_mean_EO_shape": 0.22212292985536822,
+    "b_persistence_plus_mean_shift": 0.15469680823206558
+   },
+   "frontal_theta": {
+    "ridge_shape": 0.045076616178362956,
+    "a_mean_EO_shape": 0.14428993671645662,
+    "b_persistence_plus_mean_shift": 0.08323729824749652
+   },
+   "frontal_alpha": {
+    "ridge_shape": 0.09180763850463687,
+    "a_mean_EO_shape": 0.15663723999605741,
+    "b_persistence_plus_mean_shift": 0.19162081985945512
+   },
+   "frontal_beta": {
+    "ridge_shape": 0.07632585918417481,
+    "a_mean_EO_shape": 0.2658362387781537,
+    "b_persistence_plus_mean_shift": 0.09168541737217134
+   },
+   "central_delta": {
+    "ridge_shape": 0.055133478033630466,
+    "a_mean_EO_shape": 0.1883876522041002,
+    "b_persistence_plus_mean_shift": 0.08514004445012713
+   },
+   "central_theta": {
+    "ridge_shape": 0.0429532378190717,
+    "a_mean_EO_shape": 0.13017657284659634,
+    "b_persistence_plus_mean_shift": 0.07556112300056479
+   },
+   "central_alpha": {
+    "ridge_shape": 0.09719498288186512,
+    "a_mean_EO_shape": 0.19289538996360298,
+    "b_persistence_plus_mean_shift": 0.20883016299116475
+   },
+   "central_beta": {
+    "ridge_shape": 0.03422293869462064,
+    "a_mean_EO_shape": 0.25797790485856964,
+    "b_persistence_plus_mean_shift": 0.0502601536699351
+   },
+   "posterior_delta": {
+    "ridge_shape": 0.05806376328674015,
+    "a_mean_EO_shape": 0.2305600508463279,
+    "b_persistence_plus_mean_shift": 0.08364526409815233
+   },
+   "posterior_theta": {
+    "ridge_shape": 0.05913732584841614,
+    "a_mean_EO_shape": 0.16145171171418227,
+    "b_persistence_plus_mean_shift": 0.0925856898809632
+   },
+   "posterior_alpha": {
+    "ridge_shape": 0.17041864306311286,
+    "a_mean_EO_shape": 0.3748345129764785,
+    "b_persistence_plus_mean_shift": 0.3456133275001031
+   },
+   "posterior_beta": {
+    "ridge_shape": 0.05412458862677729,
+    "a_mean_EO_shape": 0.2429274937132155,
+    "b_persistence_plus_mean_shift": 0.06455247452498929
+   }
+  },
+  "note": "MSE in squared natural-log-power units; per-person mean over 12 elements; bootstrap over the 152 evaluation people, conditional on the fixed fit"
+ },
+ "uncentered_vs_amplitude_only": {
+  "MSE_ridge": 0.11765372360537076,
+  "MSE_amplitude_only": 0.26878124918877483,
+  "mean_reduction": 0.1511275255834041,
+  "reduction_ci": [
+   0.11990503758370878,
+   0.1828320633804661
+  ],
+  "relative_reduction": 0.5622696004261136,
+  "per_element_MSE": {
+   "frontal_delta": {
+    "ridge": 0.10818963751113486,
+    "amplitude_only": 0.3048543149039113
+   },
+   "frontal_theta": {
+    "ridge": 0.08549502529490016,
+    "amplitude_only": 0.26390429922824343
+   },
+   "frontal_alpha": {
+    "ridge": 0.19982790573567333,
+    "amplitude_only": 0.21474805297562924
+   },
+   "frontal_beta": {
+    "ridge": 0.10389337330886345,
+    "amplitude_only": 0.27444896983584044
+   },
+   "central_delta": {
+    "ridge": 0.041571184242170635,
+    "amplitude_only": 0.2616821208813583
+   },
+   "central_theta": {
+    "ridge": 0.0732360612191843,
+    "amplitude_only": 0.24875839910366554
+   },
+   "central_alpha": {
+    "ridge": 0.2035455069034505,
+    "amplitude_only": 0.21948099409954339
+   },
+   "central_beta": {
+    "ridge": 0.06066389517095316,
+    "amplitude_only": 0.27387339230275964
+   },
+   "posterior_delta": {
+    "ridge": 0.041257270942436794,
+    "amplitude_only": 0.3159325969360606
+   },
+   "posterior_theta": {
+    "ridge": 0.10233717967013768,
+    "amplitude_only": 0.28997109489154077
+   },
+   "posterior_alpha": {
+    "ridge": 0.2981432413897083,
+    "amplitude_only": 0.3191706739489549
+   },
+   "posterior_beta": {
+    "ridge": 0.09368440187583578,
+    "amplitude_only": 0.2385500811577904
+   }
+  }
+ },
+ "criteria": {
+  "F1_shape_mapping_improvement_GATING": true,
+  "F2_uncentered_beats_amplitude_only_INFORMATIONAL": true,
+  "F1_detail": "ridge MSE < both baselines, both paired intervals exclude 0, relative reduction vs stronger baseline >= 5%",
+  "variance_of_level_share": null
+ },
+ "context": {
+  "var_share_level_in_EO": 0.6330886875031418,
+  "corr_EC_EO_level": 0.8652298852496194
+ }
+}

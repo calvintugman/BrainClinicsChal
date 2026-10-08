@@ -1,0 +1,21 @@
+{
+ "run_id": "PIV_E01c_Responder_20261005T080821",
+ "endpoint": "Responder",
+ "n": 164,
+ "n_pos": 97,
+ "parent": "R_rest_Responder",
+ "hypothesis": "reference only: E01 recomputed under corrected (v2) cleaning",
+ "features": "outputs/v2/features_v2_PRIVATE.csv",
+ "feature_fp": "f159581cd4a86d09",
+ "code_fp": "11c237ea249c9e2c",
+ "clean_code_fp": "15625475efa4083a",
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "started_local": "2026-10-05T08:08:43+0800",
+ "utc": "2026-10-05T00:08:43Z",
+ "runtime_s": 23,
+ "python": "3.14.7"
+}

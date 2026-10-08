@@ -1,0 +1,62 @@
+{
+ "E13_theta_mean": {
+  "rho_vs_total_ica_excl": 0.02,
+  "rho_vs_abs_diff_ica_excl": 0.13,
+  "rho_vs_n_interp": -0.06
+ },
+ "E13_theta_sd": {
+  "rho_vs_total_ica_excl": 0.44,
+  "rho_vs_abs_diff_ica_excl": 0.02,
+  "rho_vs_n_interp": 0.4
+ },
+ "E13_theta_min": {
+  "rho_vs_total_ica_excl": -0.1,
+  "rho_vs_abs_diff_ica_excl": 0.02,
+  "rho_vs_n_interp": -0.15
+ },
+ "E13_theta_max": {
+  "rho_vs_total_ica_excl": 0.21,
+  "rho_vs_abs_diff_ica_excl": 0.06,
+  "rho_vs_n_interp": 0.14
+ },
+ "E13_alpha_mean": {
+  "rho_vs_total_ica_excl": 0.01,
+  "rho_vs_abs_diff_ica_excl": 0.04,
+  "rho_vs_n_interp": -0.14
+ },
+ "E13_alpha_sd": {
+  "rho_vs_total_ica_excl": 0.38,
+  "rho_vs_abs_diff_ica_excl": 0.03,
+  "rho_vs_n_interp": 0.4
+ },
+ "E13_alpha_min": {
+  "rho_vs_total_ica_excl": -0.14,
+  "rho_vs_abs_diff_ica_excl": 0.04,
+  "rho_vs_n_interp": -0.2
+ },
+ "E13_alpha_max": {
+  "rho_vs_total_ica_excl": 0.15,
+  "rho_vs_abs_diff_ica_excl": 0.05,
+  "rho_vs_n_interp": 0.11
+ },
+ "E13_beta_mean": {
+  "rho_vs_total_ica_excl": 0.09,
+  "rho_vs_abs_diff_ica_excl": 0.01,
+  "rho_vs_n_interp": -0.2
+ },
+ "E13_beta_sd": {
+  "rho_vs_total_ica_excl": 0.43,
+  "rho_vs_abs_diff_ica_excl": 0.03,
+  "rho_vs_n_interp": 0.45
+ },
+ "E13_beta_min": {
+  "rho_vs_total_ica_excl": -0.11,
+  "rho_vs_abs_diff_ica_excl": 0.06,
+  "rho_vs_n_interp": -0.31
+ },
+ "E13_beta_max": {
+  "rho_vs_total_ica_excl": 0.16,
+  "rho_vs_abs_diff_ica_excl": 0.06,
+  "rho_vs_n_interp": 0.16
+ }
+}

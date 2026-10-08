@@ -1,0 +1,11 @@
+{
+ "rules": {
+  "diagnostic_survives_confound_control": false,
+  "batch_driven": true,
+  "inconclusive": false
+ },
+ "code_fp": "80d4d982d207b7c8",
+ "protocol_fp": "e90dd8dcb538d6f3",
+ "runtime_s": 1381,
+ "utc": "2026-10-08T03:36:24Z"
+}

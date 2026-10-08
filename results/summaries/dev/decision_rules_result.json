@@ -1,0 +1,31 @@
+{
+ "funding_D_vs_E01c": {
+  "mean_AUC_D": 0.5028821307891075,
+  "gain_vs_E01c": -0.07399125422381232,
+  "all_repeats_positive": false,
+  "threshold_mean_AUC": 0.6,
+  "threshold_gain": 0.05,
+  "met": false
+ },
+ "learned_reference_helps": {
+  "beats_A": false,
+  "beats_C": false,
+  "D_minus_A": 0.04621347644603461,
+  "D_minus_C": 0.009590538660306144,
+  "rule": "funding AND (vs A and vs C separately: mean gain>=0.05, positive every repeat, interval excludes 0)",
+  "claim_supported": false
+ },
+ "extension_status": "CLOSED (candidate D failed the funding rule)",
+ "permutation": {
+  "observed_mean_AUC_D": 0.5028821307891075,
+  "n_perm": 999,
+  "rng_seed": 21,
+  "p_value_plus_one": 0.417,
+  "null_mean": 0.4879467024169867,
+  "null_sd": 0.05961070423387702,
+  "null_q95": 0.584525939177102,
+  "runtime_s": 128,
+  "refit": "impute/scale, inner-CV C selection, threshold per repeat; folds regenerated from permuted labels (seeds 42/43/44); statistic = mean of 3 pooled-OOF AUCs",
+  "interpretation": "chance association of model D with remission only; NOT a test of incremental value or superiority over A/B/C/E01c"
+ }
+}

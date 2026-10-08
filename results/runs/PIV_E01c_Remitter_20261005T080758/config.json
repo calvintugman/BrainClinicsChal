@@ -1,0 +1,21 @@
+{
+ "run_id": "PIV_E01c_Remitter_20261005T080758",
+ "endpoint": "Remitter",
+ "n": 164,
+ "n_pos": 78,
+ "parent": "R_rest_Remitter",
+ "hypothesis": "reference only: E01 recomputed under corrected (v2) cleaning",
+ "features": "outputs/v2/features_v2_PRIVATE.csv",
+ "feature_fp": "f159581cd4a86d09",
+ "code_fp": "11c237ea249c9e2c",
+ "clean_code_fp": "15625475efa4083a",
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "started_local": "2026-10-05T08:08:20+0800",
+ "utc": "2026-10-05T00:08:20Z",
+ "runtime_s": 24,
+ "python": "3.14.7"
+}

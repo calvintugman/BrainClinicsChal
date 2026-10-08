@@ -1,0 +1,76 @@
+{
+ "run_id": "DEV_Remitter_20261005T232336",
+ "endpoint": "Remitter",
+ "complete_case_refit": false,
+ "n": 164,
+ "n_pos": 78,
+ "protocol": "DEVIATION_PROTOCOL.md",
+ "feasibility": {
+  "F1_shape_mapping_improvement": true,
+  "F3_deviation_reliability": true,
+  "proceed_to_remission_scoring": true,
+  "n_evaluation_people": 152,
+  "n_eligible_both_conditions_ge5_windows_per_half": 152,
+  "median_SB_deviation": 0.8483520782753913,
+  "n_elements_lower_bound_ge_0_30": 12,
+  "median_SB_contrast": 0.8735635916941352,
+  "median_SB_EO_shape": 0.9671623635100659,
+  "retained_duration_s": {
+   "EC_half1_median": 58.0,
+   "EC_half2_median": 58.0,
+   "EO_half1_median": 58.0,
+   "EO_half2_median": 58.0,
+   "min_any_half": 14.0,
+   "IQR_EC_half1": [
+    54.0,
+    60.0
+   ]
+  },
+  "windows_per_half_median": 28.0,
+  "recordings_without_windows": 0,
+  "thresholds": {
+   "N": 100,
+   "median_SB": 0.5,
+   "n_elements": 8,
+   "lower_bound": 0.3
+  }
+ },
+ "schema": {
+  "mapping_alpha": 10,
+  "resid_sd": [
+   0.26255459434987305,
+   0.2170822291095615,
+   0.2776603419266814,
+   0.298805744694618,
+   0.22413151387348132,
+   0.20193778393710238,
+   0.29948180985866496,
+   0.20333511665254425,
+   0.2464800160294959,
+   0.2138895234659209,
+   0.4048827452200377,
+   0.23214486303728485
+  ],
+  "n_complete": 153,
+  "n_EC_incomplete": 2,
+  "n_EO_incomplete": 10
+ },
+ "code_fp": "5a3d7760586fee61",
+ "feature_fp": "ebdcfb5ed38f6b9e",
+ "features_source_fp": "f159581cd4a86d09",
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "grid_C": [
+  0.01,
+  0.1,
+  1,
+  10
+ ],
+ "runtime_s": 4,
+ "python": "3.14.7",
+ "started_local": "2026-10-05T23:23:36+0800",
+ "utc": "2026-10-05T15:23:36Z"
+}

@@ -1,0 +1,30 @@
+{
+ "F1_shape_mapping_improvement": true,
+ "F3_deviation_reliability": true,
+ "proceed_to_remission_scoring": true,
+ "n_evaluation_people": 152,
+ "n_eligible_both_conditions_ge5_windows_per_half": 152,
+ "median_SB_deviation": 0.8483520782753913,
+ "n_elements_lower_bound_ge_0_30": 12,
+ "median_SB_contrast": 0.8735635916941352,
+ "median_SB_EO_shape": 0.9671623635100659,
+ "retained_duration_s": {
+  "EC_half1_median": 58.0,
+  "EC_half2_median": 58.0,
+  "EO_half1_median": 58.0,
+  "EO_half2_median": 58.0,
+  "min_any_half": 14.0,
+  "IQR_EC_half1": [
+   54.0,
+   60.0
+  ]
+ },
+ "windows_per_half_median": 28.0,
+ "recordings_without_windows": 0,
+ "thresholds": {
+  "N": 100,
+  "median_SB": 0.5,
+  "n_elements": 8,
+  "lower_bound": 0.3
+ }
+}

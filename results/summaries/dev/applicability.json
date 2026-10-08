@@ -1,0 +1,41 @@
+{
+ "included_vs_excluded_SMD": {
+  "age": 0.7582239094916838,
+  "female": 0.16283673496220685,
+  "clean_win_EC": 1.509669938904797,
+  "clean_win_EO": 2.1673372813328813,
+  "n_bad_EC": -0.18866250612247887,
+  "n_bad_EO": 0.12069849019544572,
+  "n_ica_excl_EC": 0.18367127706644815,
+  "n_ica_excl_EO": 0.43005889911690276,
+  "healthy_pct_included_minus_excluded": -5.839140797055542
+ },
+ "missingness": {
+  "patients_EC_incomplete": 2,
+  "patients_EO_incomplete": 10,
+  "patients_either_incomplete": 11,
+  "patients_total": 164,
+  "reference_pool_incomplete_pct": 25.513196480938415,
+  "reference_people_listed": 1023,
+  "reference_complete": 762,
+  "patient_recording_status_pct": {
+   "ok": 96.34146341463415,
+   "ica_failed": 2.4390243902439024,
+   "too_few_windows": 1.2195121951219512
+  },
+  "pool_recording_status_pct": {
+   "ok": 84.01759530791789,
+   "too_few_windows": 11.58357771260997,
+   "ica_failed": 4.398826979472141
+  },
+  "patient_age_median": 46.005,
+  "patient_female_pct": 51.21951219512195,
+  "reference_train_age_median": 43.89,
+  "reference_train_female_pct": 48.032786885245905
+ },
+ "coverage_min_pct": 95.45454545454545,
+ "coverage_median_pct": 98.42472342472342,
+ "n_variables_below_80pct": 0,
+ "max_abs_SMD": 0.2817991753440522,
+ "variables_below_80": []
+}

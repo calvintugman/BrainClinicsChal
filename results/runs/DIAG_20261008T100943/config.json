@@ -1,0 +1,14 @@
+{
+ "run_id": "DIAG_20261008T100943",
+ "protocol": "DIAGNOSTIC_PROTOCOL.md",
+ "protocol_fp": "e5958c5cd94e3e8c",
+ "code_fp": "887cb8ab52530906",
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "runtime_s": 871,
+ "python": "3.14.7",
+ "utc": "2026-10-08T02:24:03Z"
+}

@@ -1,0 +1,55 @@
+{
+ "load_state_dict": "<All keys matched successfully>",
+ "n_params": 17646,
+ "arch": {
+  "M": 10,
+  "N": 6,
+  "Experts": 80,
+  "P": 2,
+  "hidden_dim": 50,
+  "expert_type": "almost_linear_rnn",
+  "probabilistic_expert": false
+ },
+ "context": {
+  "shape": [
+   3000,
+   26
+  ],
+  "fs": 100,
+  "seconds": 30,
+  "units": "uV (per-series standardized inside preprocessor => amplitude discarded)"
+ },
+ "pretrained_embedding_shape": [
+  26,
+  12
+ ],
+ "all_finite": true,
+ "time_one_recording_30s_26series_s": 1.55,
+ "peak_rss_MB": 572,
+ "python_alloc_peak_MB": 0.4,
+ "same_seed_reproducible_max_abs_diff": 0.0,
+ "different_seed_max_abs_diff": 0.4539739191532135,
+ "pretrained_vs_random_embedding_mean_abs_diff": 0.6978200674057007,
+ "embedding_feature_std_across_series": [
+  0.2329999953508377,
+  0.5569999814033508,
+  0.5170000195503235,
+  0.4659999907016754,
+  0.4000000059604645,
+  0.3930000066757202,
+  0.1340000033378601,
+  0.08100000023841858,
+  0.16699999570846558,
+  0.1599999964237213,
+  0.00800000037997961,
+  0.007000000216066837
+ ],
+ "estimate": {
+  "one_30s_window_s": 1.5,
+  "full_120s_as_4_nonoverlap_windows_per_recording_s": 6.2,
+  "cohort_164_pts_EC_EO_s": 2028,
+  "cohort_hours": 0.56,
+  "discovery_reference_pool_1129_people_EC_EO_hours": 3.9,
+  "note": "single process, 4 torch threads; this window/horizon is a placeholder choice, not a recommended protocol"
+ }
+}

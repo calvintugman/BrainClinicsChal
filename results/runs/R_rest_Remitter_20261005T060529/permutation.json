@@ -1,0 +1,9 @@
+{
+ "observed_AUC": 0.5383124627310674,
+ "n_perm": 200,
+ "seed": 7,
+ "perm_AUC_mean": 0.4925447227191414,
+ "perm_AUC_q95": 0.5920840787119857,
+ "p_value": 0.23880597014925373,
+ "refit": "full pipeline incl. inner C selection and threshold, patient labels permuted; split seed 42"
+}

@@ -1,0 +1,31 @@
+{
+ "workbook_sha256": "86cd876ea89e69e4bbaf3c9582aea9a02a07b9d3ead2fe2b9d1cc45423def3a9",
+ "rows": 175,
+ "people": 167,
+ "responders": 98,
+ "remitters": 79,
+ "label_conflicts": 0,
+ "included": 164,
+ "excluded": 3,
+ "exclusion_reasons": {
+  "only sessID=2 row; pretreatment timing unverified": 3
+ },
+ "included_remitters": 78,
+ "people_with_oddball": 0,
+ "oddball_files_total": 162,
+ "oddball_subjects_total": 129,
+ "replication_ids_in_workbook": 0,
+ "manifest_sfreq": {
+  "500.0": 350
+ },
+ "manifest_nch": {
+  "33": 350
+ },
+ "dur_s_min_med_max": [
+  120.0,
+  121.0,
+  121.0
+ ],
+ "F3F4_present_frac": 1.0,
+ "raw_checksums_computed": false
+}

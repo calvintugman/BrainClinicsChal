@@ -1,0 +1,13 @@
+# Pipeline notes
+These commands were run from the project root (called `first_tests/` in the original working copy) with the TDBRAIN folders one level above it. Stages 01 to 46 are in `scripts/`; protocols are in `docs/protocols/` (copy a protocol to the root if a script reads it from there).
+
+Setup: `python3 -m venv .venv && .venv/bin/pip install mne mne-connectivity numpy scipy pandas openpyxl scikit-learn matplotlib seaborn pycrostates pot`
+(versions used: mne 1.13.2, mne-connectivity 0.9.0, numpy 2.5.3, scipy 1.18.1, pandas 3.0.6, scikit-learn 1.9.1, pycrostates 0.6.1, POT 0.9.7.post1, Python 3.14.7).
+Inventory: `DATA_ROOT=.. .venv/bin/python scripts/01_inventory.py` -> outputs/ (manifest_rtms.csv, inclusion_ledger_PRIVATE.csv, inventory_summary.json).
+Pipeline (run from first_tests/): scripts/01_inventory.py -> 02_qc.py -> 03_features.py -> 04_evaluate.py Remitter --perm 200 -> 04_evaluate.py Responder -> 05_report.py. Report: REPORT.html. Private files (*_PRIVATE*) must not be shared.
+Batch 2 (from first_tests/): 08_batch2_features.py -> 09_synthetic_checks.py -> 10_batch2_eval.py Remitter; 10_batch2_eval.py Responder -> 11_batch2_analysis.py -> BATCH2_REPORT.html. Audit: scripts/06_audit.py, AUDIT.md. Extra deps: specparam==2.0.0rc7, pyriemann==0.12.
+Pivot stage (from first_tests/): 12_pivot_manifest.py -> 13_pivot_qc_sample.py -> 14_features_v2.py -> 15_e01c_eval.py -> 16_dynamix_feasibility.py -> 17_pivot_figures.py -> 18_pivot_report.py; report PIVOT_FEASIBILITY_REPORT.html. Deps added: torch (CPU wheel from download.pytorch.org/whl/cpu), safetensors, statsmodels. Reviewed DynaMix source + hashes: external_review/dynamix_reviewed/.
+DynaMix stage (from first_tests/): 19_pool_features.py -> 20_cleaning_diagnostics.py -> 21_dynamix_prepare.py patients/seedsample -> 22_dynamix_seed_budget.py -> (freeze DYNAMIX_PROTOCOL.md) -> 23_dynamix_embed.py -> 24_dynamix_eval.py -> 27_dynamix_permutation.py -> 25_dynamix_analysis.py -> 26_reference_mapping.py -> 28_dynamix_report.py; report DYNAMIX_REPORT.html. Embedding cost ~13.4 CPU-hours (K=8, 4 models, 303 recordings).
+Deviation stage (from first_tests/): 30_dev_window_powers.py -> 29_dev_reference_mapping.py -> 31_dev_reliability.py -> 32_dev_applicability.py -> (gate in outputs/dev/feasibility_decision.json) -> 33_dev_outcomes.py -> 34_dev_permutation.py -> 35_dev_analysis.py -> 36_dev_report.py; report DEVIATION_REPORT.html; helper scripts/dev.py.
+
+Clinical, diagnostic and follow-up stages (run from the project root): `37_clinical_eval.py` -> `38_clinical_sensitivity.py` -> `39_aux_estimators.py` -> `40_aux_outcomes.py` -> `43_diag_eval.py` -> `44_confound_eval.py` -> `45_age_sex.py` -> `46_era_check.py`.

@@ -1,0 +1,13 @@
+endpoint,variable,group,n,n_pos,rate
+Responder,sex,female,84,54,0.643
+Responder,sex,male,80,43,0.537
+Responder,protocol,1,44,27,0.614
+Responder,protocol,2,84,55,0.655
+Responder,protocol,3,32,11,0.344
+Responder,protocol,missing,4,4,1.0
+Responder,age,tertile1 [19-40],55,41,0.745
+Responder,age,tertile2 [41-50],54,31,0.574
+Responder,age,tertile3 [51-78],55,25,0.455
+Responder,BDI_pre,tertile1 [14-26],57,37,0.649
+Responder,BDI_pre,tertile2 [27-36],55,32,0.582
+Responder,BDI_pre,tertile3 [37-58],52,28,0.538

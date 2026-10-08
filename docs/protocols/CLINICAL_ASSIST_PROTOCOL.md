@@ -1,0 +1,44 @@
+# EEG-ONLY CLINICAL-ASSIST PROTOCOL = AMENDMENT A5. STATUS 2026-10-08: SECTIONS 1-2 (estimators + outcome-blind gates G1-G3) FROZEN FOR GATE-ONLY EXECUTION at the user's instruction ('do everything'); SECTIONS 3-5 (outcome models) REMAIN DRAFT/UNFROZEN until the user answers open decision D-a (rules) and approves. Gates use only covariates (age, sex, BDI_pre), never Remitter/Responder labels, except that the saved outer splits are stratified by Remitter (fold construction only).
+## UPDATE 2026-10-08 (frozen before M1/M2/P were run): user answered D-a ('prediction itself must use only EEG; clinical labels may train'); online check: the rules page does not address training-time label use (not forbidden, not confirmed). SECTIONS 3-5 are now FROZEN FOR DESCRIPTIVE-ONLY EXECUTION: G3 failed, so there is NO primary candidate and no funding claim is possible. Models run: M1 (E01c + age_hat + sex_prob_hat), M2 (E01c residualized on [age_hat, sex_prob_hat]; regression fit on pool-training people), P2 (age_hat + sex_prob_hat only, 2 features). M4/P-with-BDI_hat are NOT run (G3 failed). C1 control not run. Estimators are the pool-trained E-age/E-sex of scripts/39_aux_estimators.py (fixed). Same pipeline/splits/threshold as A4; Remitter primary, Responder secondary; bootstrap vs E01c as in A5 section 4; no permutation test (descriptive).
+EXPLORATORY. Same 164 patients already used in every earlier stage; session-1 = pretreatment remains an unverified assumption; clean_v2 is fixed; DynaMix and resting-power arms stay closed. This amends nothing in the closed A1-A4 results.
+
+## 0. Purpose, constraint, and open decisions
+Purpose (user, 2026-10-08): use what the clinical data show (A4: baseline BDI + age + sex give Remitter AUC 0.70; E01c EEG 0.577; EEG added nothing on top) to ASSIST an EEG-only predictor.
+HARD CONSTRAINT: the prize rules say "All predictions must be based on the EEG data alone" (brainclinics.com/research/brainclinics-prize; I read it via a fetch summary, not the full text) and the local replication folders carry no metadata. Therefore AT INFERENCE no workbook variable may be read: no true age, sex, BDI_pre, protocol, or anything else. The plain idea "residualize EEG on the patient's age/sex/BDI" is therefore NOT admissible (it needs those values at test time). Admissible design: clinical variables are used ONLY as training targets for auxiliary EEG->covariate estimators; the outcome model sees only EEG-derived estimates. This is "learning using clinical labels", not "using clinical inputs".
+Open decisions for the user (nothing contacted, nothing assumed):
+ D-a. Is training-only use of clinical labels acceptable under the rules as you read them? (Age/sex prediction from EEG is a listed leaderboard category, which suggests estimators are normal practice, but this is my inference, not a rule.) If NO, this protocol is dropped; if UNSURE, results stay labelled "not confirmed prize-eligible".
+ D-b. Accept the primary-candidate choice (section 3) and the frozen interpretation rules (section 5).
+Honest expectation, stated in advance: an EEG-derived estimate is a deterministic function of the same EEG features. Any gain can only come from (i) EXTERNAL information (the age/sex estimators are learned on ~1,000 non-rTMS people, not the 164) or (ii) a low-dimensional inductive bias that reduces overfitting at n=164. The BDI_pre estimator is learned on the 164 only and adds no external information. Most of the clinical signal is BDI_pre (BDI alone 0.671 post-hoc; age+sex alone 0.542), and EEG-to-BDI prediction is not known to work. A null is the likely result; the gates below are designed to fail cheaply before any outcome is touched.
+
+## 1. Auxiliary estimators (all outcome-blind; targets are covariates, never Remitter/Responder; BDI_post is never used)
+Features for every estimator: the 65 E01c columns (v2 pipeline; shared with the pool, verified: 81/81 columns identical), train-fit median imputation, StandardScaler. Pool complete cases are only 634/1023 (patients 130/164), so imputation is required; missing counts are reported.
+E-age: Ridge (alpha {0.01..1000}, 5-fold CV inside training) on pool adults (age >= 18; patients span 18.7-78, pool 5-83, so children are excluded by this fixed rule), target age. Fixed 80/20 pool-person split (rng 2027), exact-duplicate vectors dropped, pool never contains the 164 (manifest check repeated).
+E-sex: L2 logistic (C {0.01,0.1,1,10}, 5-fold CV inside training), same split, target workbook gender.
+E-BDI: Ridge on the 164 patients only, target BDI_pre, CROSS-FITTED inside every outer-training set (5-fold inside outer-train gives training patients' out-of-fold estimates; test patients get the estimate from a model fit on the whole outer-train). A test patient's own BDI_pre is never used. This is the only estimator that sees patient covariates; no label (Remitter/Responder) is used by any estimator.
+Pool-trained E-age and E-sex are fixed once (label-free) and then applied to the 164 patients; their parameters are never refit on patients.
+
+## 2. Outcome-blind feasibility gates (computed once, before any outcome model; fixed numbers)
+G1 (age): held-out pool-adult R2 >= 0.25 AND Spearman(age_hat, true age) >= 0.50 on the 164 patients.
+G2 (sex): held-out pool AUC >= 0.70 AND AUC >= 0.65 on the 164 patients.
+G3 (severity): cross-fitted out-of-fold Spearman(BDI_hat, BDI_pre) over the 164 >= 0.30 with bootstrap 95% lower bound > 0.10 (seed-42 outer splits; the other seeds reported).
+Failing a gate drops every model that needs that estimator; no gate threshold is revised afterwards. Applicability (descriptive): estimated-vs-true age/sex/BDI distributions and coverage of patient features inside pool-training 1st-99th percentiles.
+
+## 3. Outcome models (only if the gates they need passed; Remitter primary, Responder secondary descriptive)
+Common pipeline = A4: train-fit median impute -> StandardScaler -> L2 logistic, C {0.01,0.1,1,10} by inner 3-fold log loss; same 164 patients, saved outer splits StratifiedKFold(5, shuffle) seeds 42/43/44; threshold = max inner-OOF PPV s.t. sensitivity >= 0.5, ties higher sens. Benchmarks reported in full: saved E01c (EEG only) and saved K1 (true clinical, NOT eligible, ceiling only).
+- P (PRIMARY candidate, needs G3): EEG-estimated profile = [BDI_hat, plus age_hat and sex_prob_hat if their gates passed]. 1-3 features.
+- M1 (needs G1,G2): E01c + age_hat + sex_prob_hat.   M2 (needs G1,G2): E01c with each feature residualized on [age_hat, sex_prob_hat] (regression fit on pool-training people only, applied unchanged; this is a projection of EEG features, so any benefit is regularization/external information, stated as such).   M4 (needs G3): E01c + P features.
+- If G3 fails, there is NO primary candidate; M1/M2 run as descriptive only (they cannot meet the funding rule's "primary" status).
+- Control C1 (descriptive, for P): same pipeline with auxiliary targets permuted across training people (20 permutations, rng 43), to separate "clinical information in the estimator" from "any low-dimensional supervised EEG summary".
+No other models, interactions, tree models, feature selection, alternative estimators or tuning.
+
+## 4. Inference
+Paired patient bootstrap (2000 draws, rng 1, joint across repeats, conditional on saved predictions) of mean-AUC differences: P-E01c, M1-E01c, M2-E01c, M4-E01c. One chance check: label permutation of P (999 perms, rng 41; folds regenerated from permuted labels; cross-fitted E-BDI recomputed inside every permuted split; plus-one p). Chance association only; not an increment test. Report "recovery": P mean AUC against the true-clinical ceiling K1 (0.704) and against E01c.
+
+## 5. Frozen interpretation rules
+- FUNDING (numbers unchanged from earlier stages) for P vs E01c: mean Remitter AUC >= 0.60, mean AUC gain over E01c >= 0.05, positive gain in every repeat, AND permutation p < 0.05. If met: "exploratory EEG-derived clinical-profile signal in this cohort", not a prize claim and not clinical validity.
+- Any positive result requires independent data before any further use; the same 164 people cannot validate it. Prize eligibility additionally depends on decision D-a.
+- If P fails: close the clinical-assist arm. Report descriptively whether pool-trained age/sex estimators were accurate (G1/G2) and whether E-BDI worked (G3).
+- No post-result changes to variables, models, gates or rules; follow-ups need a new amendment.
+
+## 6. Planned code, records, privacy
+scripts/39_aux_estimators.py (gates; writes outputs/aux/*), 40_aux_outcomes.py (models + controls), 41_aux_permutation.py, 42_aux_analysis.py. EXPERIMENTS.csv rows with parent CLIN_*; immutable runs/AUX_*; patient-level files stay *_PRIVATE; no IDs in shareable tables. Estimated covariates for held-out/replication people are never produced here (no submission, replication folders unused).

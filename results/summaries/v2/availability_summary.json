@@ -1,0 +1,15 @@
+{
+ "recordings_status_transitions": {
+  "ok -> ok": 316,
+  "ok -> ica_failed": 8,
+  "too_few_windows -> too_few_windows": 3,
+  "ok -> too_few_windows": 1
+ },
+ "patients_total": 164,
+ "patients_availability_changed": 15,
+ "patients_newly_missing_any_feature": 14,
+ "patients_newly_available_any_feature": 1,
+ "patients_EC_status_changed": 1,
+ "patients_EO_status_changed": 8,
+ "changed_patients_remitters": 9
+}

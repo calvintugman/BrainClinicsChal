@@ -1,0 +1,42 @@
+{
+ "pool_people_listed": 1023,
+ "recording_statuses": {
+  "ok": 1719,
+  "too_few_windows": 237,
+  "ica_failed": 90
+ },
+ "excluded_missing_EC_or_EO_features": 261,
+ "dropped_exact_duplicate_feature_vectors": 0,
+ "people_used": 762,
+ "train_people": 610,
+ "heldout_people": 152,
+ "alpha_selected": 1,
+ "cv_mse_by_alpha": {
+  "0.01": 0.2425688829798746,
+  "0.1": 0.2424684635831585,
+  "1": 0.2418373666380135,
+  "10": 0.24241017924267033,
+  "100": 0.2580415678777199,
+  "1000": 0.37200019167092535
+ },
+ "mean_R2": 0.8048450333360698,
+ "mean_R2_ci": [
+  0.7647980062972733,
+  0.8352527242351356
+ ],
+ "pooled_mse_ratio_vs_trainmean": 0.19258136768155923,
+ "features_with_R2_gt0": 12,
+ "shuffled_mean_R2_mean": -0.007796197196025018,
+ "shuffled_mean_R2_range": [
+  -0.05872508170017915,
+  0.06460274258421637
+ ],
+ "shuffled_pooled_mse_ratio_mean": 1.0077466740646266,
+ "heldout_ids_sha256": "8dd46f4d26e74dd7",
+ "shuffles": 20,
+ "pool_group_counts": {
+  "other_discovery_unlabeled_for_remission": 643,
+  "healthy_verified_by_workbook_indication": 119
+ },
+ "no_outcome_labels_read": true
+}

@@ -1,0 +1,205 @@
+{
+ "1_unique_feature_ids": true,
+ "1_ledger_ids_unique": true,
+ "1_feature_ids_eq_included": true,
+ "1_Remitter_pred_ids_match_sorted_features": true,
+ "1_Remitter_y_matches_ledger": true,
+ "1_Remitter_y_matches_workbook": true,
+ "1_Remitter_class_values": [
+  0,
+  1
+ ],
+ "3_Remitter_recompute_max_abs_diff": {
+  "auc": 0.0,
+  "brier": 5.551115123125783e-17,
+  "ppv": 5.551115123125783e-17,
+  "counts_all_ok": true,
+  "n_rows": 9
+ },
+ "2_Remitter_each_patient_one_fold_per_seed": true,
+ "2_Remitter_fold_class_counts": [
+  [
+   42,
+   0,
+   33,
+   16
+  ],
+  [
+   42,
+   1,
+   33,
+   16
+  ],
+  [
+   42,
+   2,
+   33,
+   16
+  ],
+  [
+   42,
+   3,
+   33,
+   15
+  ],
+  [
+   42,
+   4,
+   32,
+   15
+  ]
+ ],
+ "2_Remitter_E01_min_test_sens": 0.6282051282051282,
+ "1_Responder_pred_ids_match_sorted_features": true,
+ "1_Responder_y_matches_ledger": true,
+ "1_Responder_y_matches_workbook": true,
+ "1_Responder_class_values": [
+  0,
+  1
+ ],
+ "3_Responder_recompute_max_abs_diff": {
+  "auc": 5.551115123125783e-17,
+  "brier": 8.326672684688674e-17,
+  "ppv": 0.0,
+  "counts_all_ok": true,
+  "n_rows": 9
+ },
+ "2_Responder_each_patient_one_fold_per_seed": true,
+ "2_Responder_fold_class_counts": [
+  [
+   42,
+   0,
+   33,
+   20
+  ],
+  [
+   42,
+   1,
+   33,
+   20
+  ],
+  [
+   42,
+   2,
+   33,
+   19
+  ],
+  [
+   42,
+   3,
+   33,
+   19
+  ],
+  [
+   42,
+   4,
+   32,
+   19
+  ]
+ ],
+ "2_Responder_E01_min_test_sens": 0.5463917525773195,
+ "6_patients_with_windows": {
+  "EC": 163,
+  "EO": 162
+ },
+ "6_note": "half split by retained-window index; boundary windows can overlap by up to 2 s (50% overlap) -> small optimistic bias; reliability fig recomputed with a 1-window gap in 07_audit_fixes",
+ "6_status_counts": {
+  "ok": 325,
+  "too_few_windows": 3
+ },
+ "6_ica_ok": {
+  "true": 328
+ },
+ "6_ica_iter_max": 1000.0,
+ "6_n_ica_excl_dist": {
+  "2": 166,
+  "3": 119,
+  "1": 41,
+  "0": 2
+ },
+ "6_recordings_with_bad_ch": 25,
+ "6_ica_exclusion_at_cap3": 119,
+ "6_nan_counts": {
+  "EC_frontal_delta_logabs": 1,
+  "EC_frontal_delta_rel": 1,
+  "EC_frontal_theta_logabs": 1,
+  "EC_frontal_theta_rel": 1,
+  "EC_frontal_alpha_logabs": 1,
+  "EC_frontal_alpha_rel": 1,
+  "EC_frontal_beta_logabs": 1,
+  "EC_frontal_beta_rel": 1,
+  "EC_central_delta_logabs": 1,
+  "EC_central_delta_rel": 1,
+  "EC_central_theta_logabs": 1,
+  "EC_central_theta_rel": 1,
+  "EC_central_alpha_logabs": 1,
+  "EC_central_alpha_rel": 1,
+  "EC_central_beta_logabs": 1,
+  "EC_central_beta_rel": 1,
+  "EC_posterior_delta_logabs": 1,
+  "EC_posterior_delta_rel": 1,
+  "EC_posterior_theta_logabs": 1,
+  "EC_posterior_theta_rel": 1,
+  "EC_posterior_alpha_logabs": 1,
+  "EC_posterior_alpha_rel": 1,
+  "EC_posterior_beta_logabs": 1,
+  "EC_posterior_beta_rel": 1,
+  "EC_FAA": 1,
+  "EC_entropy": 1,
+  "EC_IAF": 6,
+  "EO_frontal_delta_logabs": 2,
+  "EO_frontal_delta_rel": 2,
+  "EO_frontal_theta_logabs": 2,
+  "EO_frontal_theta_rel": 2,
+  "EO_frontal_alpha_logabs": 2,
+  "EO_frontal_alpha_rel": 2,
+  "EO_frontal_beta_logabs": 2,
+  "EO_frontal_beta_rel": 2,
+  "EO_central_delta_logabs": 2,
+  "EO_central_delta_rel": 2,
+  "EO_central_theta_logabs": 2,
+  "EO_central_theta_rel": 2,
+  "EO_central_alpha_logabs": 2,
+  "EO_central_alpha_rel": 2,
+  "EO_central_beta_logabs": 2,
+  "EO_central_beta_rel": 2,
+  "EO_posterior_delta_logabs": 2,
+  "EO_posterior_delta_rel": 2,
+  "EO_posterior_theta_logabs": 2,
+  "EO_posterior_theta_rel": 2,
+  "EO_posterior_alpha_logabs": 2,
+  "EO_posterior_alpha_rel": 2,
+  "EO_posterior_beta_logabs": 2,
+  "EO_posterior_beta_rel": 2,
+  "EO_FAA": 2,
+  "EO_entropy": 2,
+  "EO_IAF": 15,
+  "conn_theta_all": 9,
+  "conn_theta_frontal": 9,
+  "conn_theta_posterior": 9,
+  "conn_theta_between": 9,
+  "conn_alpha_all": 9,
+  "conn_alpha_frontal": 9,
+  "conn_alpha_posterior": 9,
+  "conn_alpha_between": 9,
+  "conn_theta_all_h1": 9,
+  "conn_theta_frontal_h1": 9,
+  "conn_theta_posterior_h1": 9,
+  "conn_theta_between_h1": 9,
+  "conn_alpha_all_h1": 9,
+  "conn_alpha_frontal_h1": 9,
+  "conn_alpha_posterior_h1": 9,
+  "conn_alpha_between_h1": 9,
+  "conn_theta_all_h2": 9,
+  "conn_theta_frontal_h2": 9,
+  "conn_theta_posterior_h2": 9,
+  "conn_theta_between_h2": 9,
+  "conn_alpha_all_h2": 9,
+  "conn_alpha_frontal_h2": 9,
+  "conn_alpha_posterior_h2": 9,
+  "conn_alpha_between_h2": 9,
+  "ECEO_frontal_alpha_contrast": 3,
+  "ECEO_central_alpha_contrast": 3,
+  "ECEO_posterior_alpha_contrast": 3
+ }
+}

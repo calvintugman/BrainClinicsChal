@@ -1,0 +1,44 @@
+{
+ "run_id": "DM_Responder_20261005T105710",
+ "endpoint": "Responder",
+ "n": 164,
+ "n_pos": 97,
+ "protocol": "DYNAMIX_PROTOCOL.md",
+ "K": 8,
+ "weights_sha256": "a10dc3de0f8e1f98b42f61dc9d728e51176b6ae67b94d08b2f5dd9d82a6d2e71",
+ "window_manifest_sha256": "e1992e59ad7787a5",
+ "feature_fps": {
+  "pretrained": "ca06edf0f364ea72",
+  "random_a": "19218e92b683d876",
+  "random_b": "1be87e0e4c8f905d",
+  "random_c": "7fe94764232b98d5"
+ },
+ "code_fp": "a505d96c777e7767",
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "grid_C": [
+  0.01,
+  0.1,
+  1,
+  10
+ ],
+ "embed_runtime": {
+  "K": 8,
+  "tasks": 1212,
+  "wall_s": 6041,
+  "summed_task_s": 48235,
+  "mean_task_s": 39.8
+ },
+ "runtime_s": 1,
+ "python": "3.14.7",
+ "started_local": "2026-10-05T10:57:10+0800",
+ "utc": "2026-10-05T02:57:10Z",
+ "command": "scripts/24_dynamix_eval.py",
+ "versions": {
+  "sklearn": "1.9.1",
+  "torch": "2.14.1+cpu"
+ }
+}

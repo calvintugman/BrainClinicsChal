@@ -1,0 +1,122 @@
+{
+ "n_sample_recordings": 13,
+ "n_units": 338,
+ "chosen_K": 8,
+ "criterion_met": false,
+ "per_model_per_K": [
+  {
+   "model": "pretrained",
+   "K": 1,
+   "median_r": 0.9926229401825941,
+   "min_r": 0.8479202521168413,
+   "ok": false
+  },
+  {
+   "model": "pretrained",
+   "K": 2,
+   "median_r": 0.9956972912989774,
+   "min_r": 0.9033302511165765,
+   "ok": true
+  },
+  {
+   "model": "pretrained",
+   "K": 4,
+   "median_r": 0.9982568890789072,
+   "min_r": 0.9477319550416428,
+   "ok": true
+  },
+  {
+   "model": "pretrained",
+   "K": 8,
+   "median_r": 0.999135072401328,
+   "min_r": 0.9741924724565513,
+   "ok": true
+  },
+  {
+   "model": "random_a",
+   "K": 1,
+   "median_r": 0.9999999993739369,
+   "min_r": 0.45063708510823264,
+   "ok": false
+  },
+  {
+   "model": "random_a",
+   "K": 2,
+   "median_r": 0.9999999996116307,
+   "min_r": 0.6421551384385497,
+   "ok": false
+  },
+  {
+   "model": "random_a",
+   "K": 4,
+   "median_r": 0.9999999998422728,
+   "min_r": 0.7333995955214134,
+   "ok": false
+  },
+  {
+   "model": "random_a",
+   "K": 8,
+   "median_r": 0.9999999999123916,
+   "min_r": 0.8229671611967847,
+   "ok": false
+  },
+  {
+   "model": "random_b",
+   "K": 1,
+   "median_r": 0.9999999995499718,
+   "min_r": 0.7922937173024945,
+   "ok": false
+  },
+  {
+   "model": "random_b",
+   "K": 2,
+   "median_r": 0.9999999997627957,
+   "min_r": 0.8916044194606612,
+   "ok": false
+  },
+  {
+   "model": "random_b",
+   "K": 4,
+   "median_r": 0.9999999998837064,
+   "min_r": 0.9133779322426844,
+   "ok": true
+  },
+  {
+   "model": "random_b",
+   "K": 8,
+   "median_r": 0.9999999999474473,
+   "min_r": 0.9065819739813341,
+   "ok": true
+  },
+  {
+   "model": "random_c",
+   "K": 1,
+   "median_r": 0.9999999994050237,
+   "min_r": 0.6646955141130895,
+   "ok": false
+  },
+  {
+   "model": "random_c",
+   "K": 2,
+   "median_r": 0.9999999997038427,
+   "min_r": 0.7994826918698723,
+   "ok": false
+  },
+  {
+   "model": "random_c",
+   "K": 4,
+   "median_r": 0.9999999998604272,
+   "min_r": 0.8652438429789993,
+   "ok": false
+  },
+  {
+   "model": "random_c",
+   "K": 8,
+   "median_r": 0.9999999999238697,
+   "min_r": 0.8870521936005782,
+   "ok": false
+  }
+ ],
+ "mean_seconds_per_window_K16_contended": 42.3117253780365,
+ "note": "K = number of independent gating-noise replicates averaged per window"
+}
